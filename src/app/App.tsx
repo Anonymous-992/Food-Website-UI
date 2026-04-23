@@ -90,14 +90,16 @@ export default function App() {
         >
           {/* Video Background */}
           <div className="absolute inset-0 w-full h-full overflow-hidden bg-black">
-            <iframe
+            <video
               ref={videoRef}
-              src="https://player.vimeo.com/video/179493488?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
-              className="absolute top-1/2 left-1/2 w-[177.77777778vh] h-[56.25vw] min-h-full min-w-full -translate-x-1/2 -translate-y-1/2"
-              frameBorder="0"
-              allow="autoplay; fullscreen"
-              title="Cooking Video Background"
-            />
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover"
+            >
+              <source src="https://res.cloudinary.com/dv0stxj1g/video/upload/v1776965370/WhatsApp_Video_2026-04-23_at_8.28.18_PM_kwxr5f.mp4" type="video/mp4" />
+            </video>
             {/* Dark overlay for text readability */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-emerald-900/70 pointer-events-none" />
           </div>
